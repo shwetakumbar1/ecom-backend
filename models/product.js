@@ -6,7 +6,7 @@ const productSchema = new mongoose.Schema({
         require: true,
     },
     price: {
-        type: number,
+        type: Number,
         require: true,
     },
     description: {
@@ -23,12 +23,12 @@ const productSchema = new mongoose.Schema({
     },
     rating: {
         rate: {
-            type: number,
+            type: Number,
         require: true,
         },
     },
     count: {
-        type: number,
+        type: Number,
         require: true,
     },
 });
