@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const cookieparser = require("cookie-parser")
 const ProductRoutes = require("./routes/ProductRoutes");
 const authRoutes = require("./routes/authRoutes");
+const cartRoutes = require("./routes/cartRoutes");
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ app.get("/",(request,responese) => {
 });
 app.use("/products",ProductRoutes)
 app.use("/auth",authRoutes);
+app.use("/cart",cartRoutes);
 
 mongoose
 .connect(process.env.MONGO_URL)
